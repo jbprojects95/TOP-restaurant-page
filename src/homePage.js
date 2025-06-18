@@ -1,6 +1,7 @@
+// TODO: get rid of createElement("div") for gridContainer, and keep it uncommented in HTML
+
 export function loadHomePage() {
-  const gridContainer = document.createElement("div");
-  gridContainer.classList.add("grid-layout-container");
+  const gridContainer = document.getElementById("page-container");
 
   const header = document.createElement("header");
 
@@ -41,7 +42,7 @@ export function loadHomePage() {
   menuBtn.classList.add("btn");
   menuBtn.textContent = "Menu";
   h1.textContent = "Simply the best noodles!";
-  p.textContent = `No rules. Just insanely good noodles. Our fire-packed bowls are made to fuel the streets. Eat in, take out, whatever. Fast, loud, and loaded with flavor. This is how our town slurps!`;
+  p.textContent = `Our fire-packed bowls are made to fuel the streets. Eat in, take out, whatever. Fast, loud, and loaded with flavor. This is how our town slurps!`;
 
   const openingHours = [
     { day: "Monday", hours: "Closed" },
@@ -82,6 +83,6 @@ export function loadHomePage() {
   gridContainer.appendChild(footer);
 
   header.appendChild(nav);
-  document.body.innerHTML = "";
+  // document.body.innerHTML = "";
   document.body.appendChild(gridContainer);
 }

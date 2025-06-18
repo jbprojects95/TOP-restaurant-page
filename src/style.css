@@ -2,7 +2,7 @@
   --color-primary: #075b5e;
   --color-primary-hover: #0a888d;
   --color-secondary: #9fc87e;
-  --color-secondary-transparent: hsla(93, 40%, 64%, 0.8);
+  --color-secondary-transparent: hsla(93, 40%, 64%, 0.85);
   --color-neutral: #ffe6e1;
   --color-accent: #ff3f33;
   --color-accent-hover: #ff6e65;
@@ -49,6 +49,12 @@ body {
   background-repeat: repeat;
   background-size: 10%;
 }
+
+/* .bg-colour-container {
+  background-color: var(--color-secondary-transparent);
+  min-height: 100vh;
+  width: 100%;
+} */
 
 .navbar-styles {
   display: flex;
