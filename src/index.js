@@ -22,10 +22,10 @@ document.addEventListener("click", (e) => {
     clearContent();
     loadHomePage();
   } else if (page === "about") {
-    // clearContent();
+    clearContent();
     loadAboutPage();
   } else if (page === "menu") {
-    // clearContent();
+    clearContent();
     loadMenuPage();
   }
 });

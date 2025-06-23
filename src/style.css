@@ -187,6 +187,47 @@ td:not(:last-child) {
   border-right: 3px solid var(--color-accent);
 }
 
+#menu-grid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  /* The below grid-template-cols lets the grid shrink to 1 column when the window shrinks */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-rows: repeat(2, 1fr); */
+  background-color: var(--color-primary);
+  justify-content: center;
+}
+
+.menu-title {
+  color: var(--color-accent);
+  font-family: "poetsen";
+}
+
+.menu-item {
+  background: var(--color-neutral);
+  padding: 1rem;
+  margin-inline: 1rem;
+  margin-block: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* #menu-item-1 {
+  background-image: url("img/menuItems/tonkotsu_ramen.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} */
+
+/* .menu-card-img {
+  height: 500px;
+  width: 100%;
+} */
+
 footer {
   background-color: var(--color-secondary-transparent);
   padding-inline: 2rem;
