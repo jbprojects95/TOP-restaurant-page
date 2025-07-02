@@ -45,6 +45,7 @@ export function loadAboutPage() {
   const menuBtn = document.createElement("button");
   menuBtn.classList.add("btn");
   menuBtn.textContent = "Menu";
+  menuBtn.setAttribute("data-page", "Menu");
   h1.textContent = "Our story";
   p.textContent =
     "We created this restaurant for our love of affordable, quick but healthy foods that leave you feeling full and satiated. We believe in sourcing ingredients as close to home as possible. Both to support local economies, but also to help keep our carbon footprint neutral.";

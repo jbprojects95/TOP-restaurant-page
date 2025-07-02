@@ -41,6 +41,7 @@ export function loadHomePage() {
   const menuBtn = document.createElement("button");
   menuBtn.classList.add("btn");
   menuBtn.textContent = "Menu";
+  menuBtn.setAttribute("data-page", "Menu");
   h1.textContent = "Simply the best noodles!";
   p.textContent = `Our fire-packed bowls are made to fuel the streets. Eat in, take out, whatever. Fast, loud, and loaded with flavor. This is how our town slurps!`;
 
