@@ -50,7 +50,7 @@ export function loadMenuPage() {
       price: 13.99,
       category: "ramen",
       spicy: false,
-      imgSrc: "img/menuItems/tonkotsu_ramen.webp",
+      imgSrc: require("./img/menuItems/tonkotsu_ramen.webp"),
       imgAlt: "Bowl of Tonkotsu Ramen",
     },
     {
@@ -61,6 +61,8 @@ export function loadMenuPage() {
       price: 12.49,
       category: "ramen",
       spicy: false,
+      imgSrc: require("./img/menuItems/shoyu_ramen.webp"),
+      imgAlt: "Bowl of Shoyu Ramen",
     },
     {
       id: 3,
@@ -70,6 +72,8 @@ export function loadMenuPage() {
       price: 12.99,
       category: "ramen",
       spicy: false,
+      imgSrc: require("./img/menuItems/miso_ramen.webp"),
+      imgAlt: "Bowl of Miso Ramen",
     },
     {
       id: 4,
@@ -79,6 +83,8 @@ export function loadMenuPage() {
       price: 14.49,
       category: "ramen",
       spicy: true,
+      imgSrc: require("./img/menuItems/spicy_tonkotsu_ramen.webp"),
+      imgAlt: "Bowl of Spicy Tonkotsu Ramen",
     },
     {
       id: 5,
@@ -88,6 +94,8 @@ export function loadMenuPage() {
       price: 11.99,
       category: "ramen",
       spicy: false,
+      imgSrc: require("./img/menuItems/shio_ramen.webp"),
+      imgAlt: "Bowl of Shio Ramen",
     },
     {
       id: 6,
@@ -97,6 +105,8 @@ export function loadMenuPage() {
       price: 11.49,
       category: "ramen",
       spicy: false,
+      imgSrc: require("./img/menuItems/vegetarian_ramen.webp"),
+      imgAlt: "Bowl of Vegetarian Ramen",
     },
   ];
 
@@ -104,30 +114,22 @@ export function loadMenuPage() {
     const card = document.createElement("div");
     card.classList.add("menu-item");
 
-    // const imgContainer = document.createElement("div");
-    // imgContainer.id = `menu-item-${item.id}`;
-    // imgContainer.classList.add("menu-card-img");
     // Do this instead of trying to create each element individually?
     card.innerHTML = `
-      <div class="menu-item-img" id="menu-item-${item.id}"
-      style="
-        background-image: url('${item.imgSrc}');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-      "></div>
-
-      <h3 class="menu-item__name">${item.name}</h3>
-      <p class="menu-item__desc">${item.description}</p>
-      <span class="menu-item__price">£${item.price}</span>
+      <div class="menu-item-img">
+        <img
+          src="${item.imgSrc}"
+          alt="${item.imgAlt}"
+          />
+        </div>
+      <div class="menu-item-txt-container">
+      <h3 class="menu-item-name">${item.name}</h3>
+      <p class="menu-item-desc">${item.description}</p>
+      <span class="menu-item-price">£${item.price}</span></div>
     `;
 
     contentDiv.appendChild(card);
   });
-
-  // const menuGrid = document.createElement("div");
-  // menuGrid.id = "menu-grid";
-  // contentDiv.appendChild(menuGrid);
 
   const footer = document.createElement("footer");
   footer.textContent = "© 2025 jbprojects95";

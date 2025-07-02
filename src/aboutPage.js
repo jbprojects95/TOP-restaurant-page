@@ -38,8 +38,10 @@ export function loadAboutPage() {
   const contentDiv = document.createElement("div");
   contentDiv.id = "content";
   const textDiv = document.createElement("div");
+  textDiv.classList.add("about-txt");
   const h1 = document.createElement("h1");
   const p = document.createElement("p");
+
   const menuBtn = document.createElement("button");
   menuBtn.classList.add("btn");
   menuBtn.textContent = "Menu";
