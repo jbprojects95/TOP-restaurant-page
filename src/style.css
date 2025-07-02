@@ -24,6 +24,10 @@
   src: url(fonts/Poetsen_One/PoetsenOne-Regular.ttf);
 }
 
+html {
+  background-color: var(--color-neutral);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +42,10 @@ body {
 
   min-height: 100vh;
   background-color: var(--color-neutral);
+
+  background-image: url(img/repeating-bg.png);
+  background-repeat: repeat;
+  background-size: 10%;
 }
 
 .grid-layout-container {
@@ -45,9 +53,9 @@ body {
   grid-template-rows: minmax(50px, auto) 1fr minmax(50px, auto);
   min-height: 100vh;
 
-  background-image: url(img/repeating-bg.png);
+  /* background-image: url(img/repeating-bg.png);
   background-repeat: repeat;
-  background-size: 10%;
+  background-size: 10%; */
 }
 
 /* .bg-colour-container {
